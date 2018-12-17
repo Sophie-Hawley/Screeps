@@ -9,6 +9,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-screeps')
     grunt.loadNpmTasks('grunt-contrib-clean')
     grunt.loadNpmTasks('grunt-contrib-copy')
+    grunt.loadNpmTasks('grunt-typescript');
 
     grunt.initConfig({
         screeps: {
@@ -34,7 +35,7 @@ module.exports = function(grunt) {
           screeps: {
             files: [{
               expand: true,
-              cwd: 'src/',
+              cwd: 'js/',
               src: '**',
               dest: 'dist/',
               filter: 'isFile',
@@ -60,9 +61,21 @@ module.exports = function(grunt) {
               }
             }
         },
+        typescript: {
+          base: {
+            src: ['src/**/*.ts'],
+            dest: 'js/',
+            options: {
+              module: 'amd', //or commonjs
+              target: 'es5', //or es3
+              sourceMap: true,
+              declaration: true
+            }
+          }
+        },
     })
 
-    grunt.registerTask('default',  ['clean', 'copy:screeps', 'screeps']);
+    grunt.registerTask('default',  ['typescript', 'clean', 'copy:screeps', 'screeps']);
     grunt.registerTask('test', ['jsbeautifier:verify']);
     grunt.registerTask('pretty', ['jsbeautifier:modify']);
 }
