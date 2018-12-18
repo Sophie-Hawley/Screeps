@@ -1,4 +1,4 @@
-class task {
+export class task {
     request:string;
     target: string;
     source: string;
