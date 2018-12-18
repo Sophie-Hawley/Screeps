@@ -1,3 +1,4 @@
+import { task } from './task'
 export class message{
     ttl: number;
     type: number;
