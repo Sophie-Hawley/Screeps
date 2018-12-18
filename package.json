@@ -13,8 +13,7 @@
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-jsbeautifier": "^0.2.13",
-    "grunt-typescript": "^0.8.0",
-    "grunt-typescript": ""
+    "grunt-typescript": "^0.8.0"
   },
   "dependencies": {
     "grunt-screeps": "^1.4.0"
