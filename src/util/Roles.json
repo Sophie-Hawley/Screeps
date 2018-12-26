@@ -1,0 +1,6 @@
+{
+    "Role":{
+        "Core": ["Mining", "Supply", "Work","Upgrade"],
+        "Claim": ["Claim", "Reserve", "Pioneer"]
+    }
+}
