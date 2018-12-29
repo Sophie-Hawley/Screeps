@@ -23,6 +23,9 @@ export class message{
             return 0;
 
     }
+    getttl(){
+        return this.ttl
+    }
     getType(){
         return this.type;
     }   
